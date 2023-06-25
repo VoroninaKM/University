@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #00FFFF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.AuthController">
+   <children>
+      <AnchorPane layoutY="112.0" prefHeight="294.0" prefWidth="700.0" style="-fx-background-color: #FFE4C4;">
+         <children>
+            <Label layoutX="102.0" layoutY="41.0" text="Ваш логин" />
+            <Label fx:id="password_field" layoutX="310.0" layoutY="90.0" text="password" />
+            <Label fx:id="login_field" layoutX="310.0" layoutY="41.0" text="login" />
+            <Label layoutX="102.0" layoutY="90.0" text="Ваш пароль" />
+            <ImageView fx:id="auth_image" fitHeight="150.0" fitWidth="200.0" layoutX="459.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="262.0" layoutY="41.0" text="Вы вошли!" textAlignment="CENTER">
+         <font>
+            <Font name="System Italic" size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

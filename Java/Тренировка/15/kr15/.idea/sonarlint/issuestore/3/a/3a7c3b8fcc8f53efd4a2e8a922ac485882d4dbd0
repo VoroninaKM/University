@@ -1,0 +1,18 @@
+
+X	java:S125*"<This block of commented-out lines of code should be removed.(¶êÔ‰8ü™¶ë™/
+›
+java:S1130!"yRemove the declaration of thrown exception 'java.lang.ClassNotFoundException', as it cannot be thrown from method's body.(ÿìíçşÿÿÿÿ8‰ËÌë™/
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿éİÌ8í†²ê™/
+
+java:S1130!"nRemove the declaration of thrown exception 'java.sql.SQLException', as it cannot be thrown from method's body.(ÿìíçşÿÿÿÿ8‰ËÌë™/
+]	java:S125$"<This block of commented-out lines of code should be removed.(É—èııÿÿÿÿ8âñÄë™/
+l
+java:S1104"OMake lst a static final constant or non-public and provide accessors if needed.(„Ñ¥Ü8­ìÃë™/
+F
+java:S1444")Make this "public static lst" field final(„Ñ¥Ü8­ìÃë™/
+:
+java:S2386"Make this member "protected".(„Ñ¥Ü8úÖÄë™/
+9
+java:S1116"Remove this empty statement.(„Ñ¥Ü8úÖÄë™/
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(›ê¢©8í†²ê™/

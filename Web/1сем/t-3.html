@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<script>
+    function fun() {
+        var data = document.getElementById('dr');
+        data.innerHTML = '';
+        data.innerHTML += '<div id="main" ></div>'
+        var form = document.getElementById('main');
+        var no = document.getElementById("idname").value;
+        var arr = [];
+        for (var i = 0; i < no; i++) {
+            arr[i] = getRandomArbitary(0, 100);
+        }
+        for(var i=0;i<no;i++) {
+            form.innerHTML += '<input type="text" value="'+arr[i]+'"><br><br>';
+        }
+        data.innerHTML += '<input class="butt" id="torem" type="button" onClick="form2()" value="Create second form">';
+    }
+    function getRandomArbitary(min, max) {
+        return Math.floor(min + Math.random() * (max + 1 - min));
+    }
+    function form2(){
+        var form2 = document.getElementById('form2');
+        form2.innerHTML = '';
+        var cop = document.getElementById("main").cloneNode(true);
+        form2.appendChild(cop);
+        form2.innerHTML += '<input class="butt" type="button" onclick="del()" value="Delete second form">';
+    }
+    function del(){
+        var delform2 = document.getElementById("form2");
+        delform2.innerHTML = '';
+    }
+
+</script>
+<HEAD><META charset=UTF-8">
+    <title>Voronina PI19-1, Task3‚ v26</title>
+    <style>
+        .butt {
+            font-size: 17px;
+            background-color: #6ba2ce;
+            color: #ffffff;
+            border: 2px solid #6ba2ce;
+            border-radius: 8px;
+            width: 250px;
+        }
+        body{
+            margin:auto;
+            text-align: center;
+            background-color: #f1f6ff;
+            width: 900px;
+        }
+        input {
+            width: 250px;
+            font-size: 17px;
+            border: 2px solid #6ba2ce;
+            background: #f9fcff;
+            border-radius: 8px;
+        }
+        .data{
+            float: left;
+            margin: auto;
+            width: 425px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 2px solid #6ba2ce;
+            padding: 10px 10px 10px 10px;
+        }
+    </style>
+</HEAD>
+<body>
+        <h3>Воронина Ксения, ПИ19-1, Вариант 26</h3>
+        <h3>(а) Несколько элементов INPUT и кнопка.
+            <br>(б) Задаются начальные значения INPUT и их число.
+            <br>(в) По кнопке все INPUT становятся недоступными.
+            <br>Начальные значения заданы в массиве</h3>
+
+        <div class="form">
+
+            <form id="form">
+                <input type="type" id="idname" value="" placeholder="Number of inputs"><br><br>
+                <input class="butt" type="button" onclick="fun()" value="Generate"><br><br>
+                <button class="butt" onclick='window.open("https://yandex.ru/", "Yandex")'>Open Yandex</button>
+                <br><br>
+                <div id='dr' class="data">
+                </div>
+            </form>
+
+            <form id="form2" class="data">
+            </form>
+            <br><br>
+
+        </div>
+
+</body>

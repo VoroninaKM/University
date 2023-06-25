@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Значения</title>
+</head>
+<body>
+<h2>Укажите значения и операцию</h2>
+
+<form th:action="@{/}" th:method="POST">
+
+  <label for="par1">Первое число</label><br><br>
+  <input type="text" name="par1" id="par1">
+  <br><br><br>
+
+  <label for="par2">Второе число</label><br><br>
+  <input type="text" name="par2" id="par2">
+  <br><br><br>
+
+  <label for="action">Операция</label><br><br>
+  <select name="action" id="action">
+    <option value="summation">Сложение</option>
+    <option value="subtraction">Вычитание</option>
+    <option value="division">Деление</option>
+    <option value="multiplication">Умножение</option>
+    <option value="exponentiation">Возведение в степень</option>
+  </select>
+  <br><br><br>
+
+  <button>Посчитать</button>
+</form>
+</body>
+</html>

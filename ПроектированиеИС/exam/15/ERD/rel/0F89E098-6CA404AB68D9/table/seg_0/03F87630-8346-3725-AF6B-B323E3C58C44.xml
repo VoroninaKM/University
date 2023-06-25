@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="03F87630-8346-3725-AF6B-B323E3C58C44" name="Groups">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>FB42BE58-2C73-ADB4-7E29-4EDEDAC47F57</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Group_ID" id="1D2C52EF-2265-B53B-A726-E7F3B87561FC">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>60563591-C7B5-9DBE-972B-1B677ADA2E11</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Name" id="3534F568-61D5-D37B-7C75-C9C4768E5748">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>EE660DB8-5BAA-2E7E-820F-B1765C7B9040</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Department" id="1FC05620-841A-8899-705F-C47CCEC5E0D2">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>747EAD2D-962D-D32F-00C7-5DCF3A98E280</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Specialization" id="09324E2E-7B1B-6B95-9620-A78ED03DCC8A">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>901AF63B-2D1C-478A-00A1-1832DD6FCAF4</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="292AB510-A2AF-531D-D63B-5D39097757B7" name="Groups_PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>179B99A9-D31D-454E-C30F-75CE0E602B71</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1D2C52EF-2265-B53B-A726-E7F3B87561FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

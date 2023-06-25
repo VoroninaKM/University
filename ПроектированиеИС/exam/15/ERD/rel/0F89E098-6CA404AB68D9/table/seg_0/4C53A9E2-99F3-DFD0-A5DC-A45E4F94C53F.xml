@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4C53A9E2-99F3-DFD0-A5DC-A45E4F94C53F" name="Groups_with_professors">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>C9978803-E9E1-3609-DDC9-6E59769D8C39</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="F82465EF-17F6-7863-0BC8-BA833BDFE600">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>2FCAC5A7-4A57-30FE-109D-FC4696EB9EE4</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Administrations_Administration_Id" id="F604082C-545A-A9BF-72A6-2C2FBBC21265">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>2D890AB4-EF92-F4FA-9237-49A1613C6056</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Professors_Professor_ID" id="1894199F-B572-788A-3765-A1EF31EB4672">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>6A9D9321-56F3-8834-B21F-0F35529795A6</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB18825D-F493-0122-EA56-9054B86A3DD5" referredColumn="8F3D2619-C6D1-D4CB-8042-6B80D47041C8"/>
+</associations>
+</Column>
+<Column name="Groups_Group_ID" id="61C2E342-C4EC-172D-A942-F01D1ADB0E0B">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>0CDBA10E-1FFC-AD08-92D3-CC07F4A695C0</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E9AD0919-3CD4-9967-AF55-D6E286313EF5" referredColumn="1D2C52EF-2265-B53B-A726-E7F3B87561FC"/>
+</associations>
+</Column>
+<Column name="Working_hours" id="30EF1C18-3946-708A-9E12-8F5704A19B85">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 14:23:23 UTC</createdTime>
+<generatorID>A36C69F0-1618-0D9C-F7DA-4B6C75C8FF19</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C293960E-0906-0B29-300F-640749002BBD" name="Groups_with_professors_PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>660C4E33-0DBF-51BF-13C7-F73185A0A0A2</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F82465EF-17F6-7863-0BC8-BA833BDFE600"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="36EE9319-1068-38DE-7A5B-78E40D41B5AF" name="Groups_with_professors_Professors_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>1495420F-7B1A-25B3-B957-9D70139AD102</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1894199F-B572-788A-3765-A1EF31EB4672"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="037A15DC-99BF-5718-817E-E9FF8D9D7B82" name="Groups_with_professors_Groups_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>A889A5AD-7B1D-CB12-B809-F3B151F2EFF6</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61C2E342-C4EC-172D-A942-F01D1ADB0E0B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

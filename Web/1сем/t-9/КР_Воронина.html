@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>КР Воронина Ксения, ПИ19-1</title>
+    <style>
+        body {
+            color: saddlebrown;
+            background: bisque;
+            font-family: URW Chancery L, cursive;
+        }
+        input {
+        width: 300px;
+        font-size: 13px;
+        padding: 6px 0 4px 10px;
+        border: 1px solid #cecece;
+        background: #F6F6f6;
+        border-radius: 8px;
+    }
+    </style>
+</head>
+<body>
+<div>
+    <p style="text-align: center; margin-top: 10px"><strong>Воронина Ксения, ПИ19-1, КР задача 50</strong></p>
+    <p style="text-align: center; margin-top: 10px">
+        Вводятся 2 целых числа. Проверить в скриптах, выполняемых по событию onBlur, корректность ввода.<br>
+        Возвращать фокус ввода при неправильных значениях.<br><br><br><br>
+    </p>
+</div>
+<form type="text" name="myForm" style="text-align: center; margin-top: 10px">
+    <p> Первое число = <input type="text" id="X1">
+    <p> Второе число =  <input type="text" id="X2">
+</form>
+    <script>
+        X1.onblur = function() {
+            if (isNaN(this.value)) { // введено не число
+                //вернуть фокус обратно
+                X1.focus();
+            }
+        };
+        X2.onblur = function() {
+            if (isNaN(this.value)) { // введено не число
+                //вернуть фокус обратно
+                X2.focus();
+            }
+        };
+    </script>
+</body>
+</html>

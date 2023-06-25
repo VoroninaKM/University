@@ -1,0 +1,39 @@
+.title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #053e27;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    font-family: sans-serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 2px;
+    background: #ece9e0;
+    color: #000000;
+    border: 2px solid #2c6d2c;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+th {
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px;
+}
+
+td {
+    padding: 10px;
+    font-size: 18px;
+}
+
+tr.one {
+    background: rgba(120, 232, 139, 0.91);
+}
+
+tr.two {
+    background: rgba(120, 232, 183, 0.73);
+}

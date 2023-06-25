@@ -1,0 +1,76 @@
+<html><head><meta charset="Windows-1251"/></head>
+<style type="text/css">
+    #cs1 {
+        background-color:#EEE;
+        border: 2px solid #4CAF50;
+    }
+</style>
+<script>
+        function line() {
+            var cs1 = document.getElementById("cs1");
+            var cnt1 = cs1.getContext("2d");
+            point1 = mp[rand(mp.length)];
+            point2 = mp[rand(mp.length)];
+            cnt1.strokeStyle = '#13c71c';
+            cnt1.lineWidth = 2; // толщина линии
+            cnt1.moveTo(point1[0], point1[1]); //передвигаем перо
+            cnt1.lineTo(point2[0], point2[1]); //рисуем линию
+            cnt1.stroke();
+        }
+        function rand(n){
+          return Math.round(n*Math.random());
+        }
+        function dist2(x1,y1,x2,y2){
+          return Math.sqrt(Math.pow(x1-x2,2) + Math.pow(y1-y2,2));
+        }
+        mp = []
+        function start(){
+            fp()
+            var cs1 = document.getElementById("cs1");
+            var cnt1 = cs1.getContext("2d");
+            with (cnt1) {
+                for (var i=0; i<mp.length; i++){  //
+                    p = mp[i];
+                    x = p[0];
+                    y = p[1];
+                    beginPath()
+                        cnt1.arc(x, y, p[2], 0, Math.PI*2);
+                        cnt1.fill()
+                    stroke()
+                    closePath()
+                }
+            }
+        }
+        function fp(){
+            n = 30
+            for (var i=0;i<n;i++){  //
+                x = rand(1000); y = rand(450); r = 2
+                b = true
+                if (i>0) for (var j=0;j<mp.length;j++){
+                    d = dist2(x,y,mp[j][0], mp[j][1])
+                    b = b && (d > mp[j][2] + r)
+                }
+                if (b) mp.push([x,y,r])
+            }
+        }
+</script>
+</head>
+<body>
+<div>
+    <p style="text-align: center; margin-top: 10px"><strong>Воронина Ксения, ПИ19-1, Задание 9</strong></p>
+    <p style="text-align: center; margin-top: 10px">
+        Написать функцию, которая генерирует случайным образом множество точек и отображает их на canvas.<br>
+        По нажатию одной кнопки отображается множество точек, по другой - вызывается функция, производящую заданные действия.
+    </p>
+</div>
+<table border cellspacing=5 cellpadding=5>
+    <tr><td valign='top'>
+        <button style="padding: 10px 40px;background-color: #4CAF50; color: white; border: 2px solid #4CAF50;"
+                onclick='start()'>Сгенерировать точки</button> <br><br>
+        <button style="padding: 10px 47px;background-color: #4CAF50; color: white; border: 2px solid #4CAF50;"
+                onclick='line()'>Построить прямую</button>
+    <td valign=top>
+    <canvas id="cs1" width="1000" height="450"></canvas>
+</table>
+</body>
+</html>

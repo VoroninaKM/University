@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+    label{
+        width: 300px;
+        display: block;
+        margin: 10px;
+        vertical-align: middle;
+    }
+    </style>
+</head>
+<body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://localhost:5000');
+        socket.on('message', function(message){ //прием
+            
+            alert('сервер прислал вам сообщение: '+message);
+            
+        });
+        
+
+    </script>
+    <script>
+        var recognizer = new webkitSpeechRecognition();
+        recognizer.interimResults=true;
+        recognizer.lang='ru-Ru';
+
+        async function sendMessage(){
+            var text = document.getElementById('textarea').value;
+            var email = document.getElementById('email').value;
+            socket.emit('eventClient', {message: text, mail: email}); //передаем
+        }
+        function startRecognition(){
+            recognizer.onresult = function(event){
+                var result = event.results[event.resultIndex];
+                document.getElementById('textarea').value = result[0].transcript;
+            }
+            recognizer.start();
+            document.getElementById("status").style="display:flex";
+        }
+        function voice(){
+            var inputTxt = document.getElementById("textarea");
+            if (inputTxt.value != ''){
+                window.speechSynthesis.cancel();
+                const utterance = new SpeechSynthesisUtterance(inputTxt.value);
+                window.SpeechSynthesis.speak(utterance);
+            }else {
+                alert("Введите текст для озвучивания");
+            }
+        }
+    </script>
+    <div id="wrapper">
+        <p><label>Почта:
+            <input style="width: 300px;" type="email" id="email">
+        </label></p>
+        <label>Сообщение: 
+            <textarea style="width: 500px;height: 150px;" id="textarea" class="textarea"> Привет, как дела?</textarea>
+        </label>
+    </div>
+    <ul class="list-group list-group-horizontal-lg">
+        <button class="list-group-item list-group-item-primary" id="sendMessage" onclick="sendMessage()">Отправить</button>
+        <button class="list-group-item list-group-item-warning" id="start" onclick="startRecognition()">Старт</button>
+        <button class="list-group-item list-group-item-danger" id="stop" onclick="stopRecognition()">Стоп</button>
+        <button class="list-group-item list-group-item-info" id="voice" onclick="voice()">Озвучить</button>
+    <p id="status" style="display:none">Слушаю...</p>
+    </ul>
+
+</body>
+</html>

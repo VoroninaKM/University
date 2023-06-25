@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scoring</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <form action="http://localhost:3000//scoring" method="post">
+        <h2>Форма для заполнения</h2>
+        <p><i>Пожалуйста, заполните форму!</i></p>
+        <fieldset style="{font-size:2em}">
+            <legend style="font-size: larger">Контактная информация</legend>
+                <label for="name">ФИО <em>*</em></label>
+                <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" value="Воронина Ксения Максимовна" autofocus required><br>
+
+            <label for="phone">Номер телефона</label>
+            <input type="text" id="phone" name="phone" placeholder="(ххх)-хх-хх" value="9647829792"><br>
+
+            <label for="email">Электронная почта<em>*</em></label>
+            <input type="email" id="email" name="email" placeholder="*****@qmail.com" value="192947@edu.fa.ru" required><br>
+        </fieldset>
+        <fieldset style="{font-size:7em}">
+            <legend style="font-size: larger">Данные для проверки</legend>
+            <label for="gender">Пол</label>
+            <select name="gender" id="gender">
+                <option value="female">Женский</option>
+                <option value="male">Мужской</option>
+            </select><br>
+
+            <label for="birthD">Дата рождения<em>*</em></label>
+            <input type="date" name="birthD" id="birthD" value="2001-10-10" required><br>
+
+            <label for="period">Срок проживания в регионе<em>*</em></label>
+            <input type="numder" name="period" id="period" min="0" max="80" value="20" required><br>
+
+            <label for="prof">Профессия</label>
+            <select name="prof" id="prof">
+                <option value="driver">Водитель</option>
+                <option value="policeman">Полицейский</option>
+                <option value="pilot">Пилот</option>
+                <option value="judge">Судья</option>
+                <option value="developer">Программист</option>
+                <option value="teacher">Преподаватель</option>
+                <option value="doctor">Врач</option>
+                <option value="other">Другое</option>
+            </select><br>
+
+            <label for="sphere">Сфера деятельности</label>
+            <select name="sphere" id="sphere">
+                <option value="public">Общественная</option>
+                <option value="other">Другое</option>
+            </select><br>
+
+            <label for="periodW">Период работы в организации<em>*</em></label>
+            <input type="numder" name="periodW" id="periodW" min="0" max="80" value="2" required><br>
+
+            <label for="bank">Наличие банковского счета</label>
+            <input type="checkbox" name="bank" id="bank"><br>
+
+            <label for="real">Наличие недвижимости</label>
+            <input type="checkbox" name="real" id="real"><br>
+
+            <label for="policy">Наличие страхового полиса</label>
+            <input type="checkbox" name="policy" id="policy"><br>
+        </fieldset>
+
+        <button>Отправить данные</button>
+    </form>
+</body>
+</html>

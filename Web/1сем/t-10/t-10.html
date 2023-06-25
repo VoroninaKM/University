@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Воронина Ксения, ПИ19-1</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+	<style type="text/css">
+        *{
+          margin: 0;
+          padding: 0;
+        }
+
+        body, html, #container {
+            width: 100%;
+            height: 93%;
+        }
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p style="text-align: center; margin-top: 10px"><strong>Воронина Ксения, ПИ19-1, Задание 10</strong></p>
+        <p style="text-align: center; margin-top: 10px">
+            Построение графиков и диаграмм с помощью библиотеки AnyChart.
+        </p>
+    </div>
+    <div class="center" style="margin: 10px auto 0;">
+        <button style="padding: 10px 65px;background-color: #4CAF50; color: white; border: 2px solid #4CAF50;"
+                type="submit" class="button" onclick="one()">График №1</button>
+        <button style="padding: 10px 65px;background-color: #4c5caf; color: white; border: 2px solid #4c5caf;"
+                type="submit" class="button" onclick="two()">График №2</button>
+        <button style="padding: 10px 65px;background-color: #0097d4; color: white; border: 2px solid #0097d4;"
+                type="submit" class="button" onclick="three()">График №3</button>
+        <button style="padding: 10px 65px;background-color: #e32323; color: white; border: 2px solid #e32323;"
+                type="submit" class="button" onclick="four()">График №4</button>
+        <button style="padding: 10px 65px;background-color: #e350a8; color: white; border: 2px solid #e350a8;"
+                type="submit" class="button" onclick="five()">График №5</button>
+        <button style="padding: 10px 65px;background-color: #3aafad; color: white; border: 2px solid #3aafad;"
+                type="submit" class="button" onclick="six()">График №6</button>
+    </div>
+	<div id="container">
+    </div>
+
+    <script src="https://cdn.anychart.com/js/latest/anychart-bundle.min.js"></script>
+    <script src="https://cdn.anychart.com/js/latest/data-adapter.min.js"></script>
+	<script type="text/javascript">
+        function one() {
+            document.getElementById('container').innerHTML = '';
+            var chart = anychart.column();
+            chart.data({header: ["#", "8 часов", "12 часов", "15 часов", "18 часов", "22 часа",],
+                rows:[
+                {x: "Понедельник", am8 : 6, pm12: 4, pm15: 5, pm18: 7, pm22: 3},
+                {x: "Вторник", am8: 7, pm12: 6, pm15: 7, pm18: 9, pm22: 4},
+                {x: "Среда", am8: 7, pm12: 5, pm15: 7, pm18: 9, pm22: 4},
+                {x: "Четверг",   am8: 7, pm12: 6, pm15: 7, pm18: 9, pm22: 4},
+                {x: "Пятница", am8: 6, pm12: 5, pm15: 6, pm18: 8, pm22: 3},
+                {x: "Суббота", am8: 4, pm12: 4, pm15: 4, pm18: 3, pm22: 2},
+                {x: "Воскресенье", am8: 1, pm12: 2, pm15: 3, pm18: 3, pm22: 1},
+              ]});
+            chart.title("Гистограмма с группировкой. Пробки в Москве по дням.");
+            chart.legend(true);
+            chart.container("container").draw();
+        };
+
+        function two () {
+            document.getElementById('container').innerHTML = '';
+            var chart = anychart.column([
+                ["Январь", -6.7],
+                ["Февраль", -6.2],
+                ["Март", -0.8],
+                ["Апрель", 6.9],
+                ["Май", 13.5],
+                ["Июнь", 17.2],
+                ["Июль", 20.1],
+                ["Август", 17.8],
+                ["Сентябрь", 11.9],
+                ["Октябрь", 5.9],
+                ["Ноябрь", 0],
+                ["Декабрь", -4]
+            ]);
+            chart.title("Гистограмма обычная. Средняя температура по месяцам в Москве.");
+            chart.container("container").draw();
+        };
+
+        function three() {
+            document.getElementById('container').innerHTML = '';
+            var chart = anychart.pie([
+                ["Иванова", 5],
+                ["Петров", 21],
+                ["Сидоров", 9],
+                ["Голубев", 15],
+                ["Соколова", 24],
+                ["Смирнов", 16],
+                ["Синицина", 10]
+            ]);
+            chart.title("Круговая диаграмма. Аналитика по продажам менеджеров.");
+            chart.container("container").draw();
+        };
+
+        function four(){
+            document.getElementById('container').innerHTML = '';
+            var chart = anychart.line([
+                {x: "06.12", value: 73.67},
+                {x: "07.12", value: 74.34},
+                {x: "08.12", value: 73.85},
+                {x: "09.12", value: 73.60},
+                {x: "10.12", value: 73.75},
+                {x: "11.12", value: 74.14},
+            ]);
+            chart.title("График обычный. Цена $ за 06.12.21 -- 11.12.21");
+            chart.container("container").draw();
+        };
+
+        function five() {
+            document.getElementById('container').innerHTML = '';
+            var chart = anychart.line()
+            chart.data({header: ["#", "Физика", "Химия", "Биология", "Информатика", "Обществознание"],
+                rows:[
+                    ["2018", 8, 5, 17, 10, 23],
+                    ["2019", 9, 3, 15, 11, 22],
+                    ["2020", 15, 6, 21, 13, 22],
+                    ["2021", 7, 6, 14, 15, 24]
+                ]});
+            chart.title("График с несколькими переменными. Кол-во учеников, сдающих предмет на ЕГЭ по школе.");
+            chart.legend(true);
+            chart.container("container").draw();
+        };
+
+        function six() {
+            document.getElementById('container').innerHTML = '';
+            var json = {
+                "chart": {
+                    "type": "column",
+                    "title": "График на основе json",
+                    "series": [{
+                        "seriesType": "Spline",
+                        "data": [
+                            {"x": "Объект 1", "value": "128.14"},
+                            {"x": "Объект 2", "value": "100.61"},
+                            {"x": "Объект 3", "value": "182.21"},
+                            {"x": "Объект 4", "value": "229.98"},
+                            {"x": "Объект 5", "value": "90.54"}
+                        ]
+                    },
+                        {
+                            "seriesType": "Column",
+                            "data": [
+                                {"x": "Объект 1", "value": "50.54"},
+                                {"x": "Объект 2", "value": "104.19"},
+                                {"x": "Объект 3", "value": "90.67"},
+                                {"x": "Объект 4", "value": "120.43"},
+                                {"x": "Объект 5", "value": "180.34"}
+                            ]
+                        }],
+                    "container": "container"
+                }
+            };
+            chart = anychart.fromJson(json);
+            chart.draw();
+        };
+</script>
+</body>
+</html>

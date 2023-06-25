@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FB42BE58-2C73-ADB4-7E29-4EDEDAC47F57" name="Groups">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:14:14 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Group_ID" id="60563591-C7B5-9DBE-972B-1B677ADA2E11">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:14:19 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="EE660DB8-5BAA-2E7E-820F-B1765C7B9040">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:14:19 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Department" id="747EAD2D-962D-D32F-00C7-5DCF3A98E280">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:14:19 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Specialization" id="901AF63B-2D1C-478A-00A1-1832DD6FCAF4">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:14:19 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="179B99A9-D31D-454E-C30F-75CE0E602B71" name="Groups PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:23:55 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>60563591-C7B5-9DBE-972B-1B677ADA2E11</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

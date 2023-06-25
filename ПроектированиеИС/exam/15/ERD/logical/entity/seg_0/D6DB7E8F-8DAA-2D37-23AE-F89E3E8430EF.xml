@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D6DB7E8F-8DAA-2D37-23AE-F89E3E8430EF" name="Subjects">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:40:18 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Subject_ID" id="17B521E6-6C21-A686-6828-EFE31A9EFCCE">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:40:27 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Name" id="BA6DD65B-01D4-93E1-00A0-45D1A624C018">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:40:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="80939B8F-C2DD-9FAA-21CF-CBC2BC6BDE3E" name="Subjects PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:40:39 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>17B521E6-6C21-A686-6828-EFE31A9EFCCE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

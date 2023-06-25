@@ -1,0 +1,95 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="37455775-4165-DCDB-5DE7-C5DE0F7DAD5A" name="Subjects_and_Professors">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:43:29 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="7696E168-3444-0F17-CB88-664BAE5BBC94">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:44:04 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Type" id="E6616CD9-169F-7E3E-82AE-F432850C6D70">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:44:07 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Subject_ID" id="57E91364-95B4-F306-9FCA-EACB9FAA2B71">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:44:36 UTC</createdTime>
+<generatorID>76EC06B2-EF0F-C78F-AB5E-2072EECF24E7</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<referedAttribute>17B521E6-6C21-A686-6828-EFE31A9EFCCE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Professor_ID" id="ADDDB9C5-C0AD-9827-D5D4-2953E7C16156">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:44:41 UTC</createdTime>
+<generatorID>CFE00D8E-347E-B239-D4B6-ECA64E299297</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<referedAttribute>930646FE-2C77-1CF4-C300-266F67086FBE</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Salary_for_1_hour" id="CA4DF22F-CCAB-6D45-2185-29E4E9D4669F">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 14:22:44 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1EF2B7CF-8EC2-DC55-1378-9B65CB6F1A02" name="Subjects_and_Professors PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:44:18 UTC</createdTime>
+<ownerDesignName>ERD</ownerDesignName>
+<engineerTo>
+<item key="0F89E098-EF20-AF3C-6720-6CA404AB68D9" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>7696E168-3444-0F17-CB88-664BAE5BBC94</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

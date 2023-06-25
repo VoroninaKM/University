@@ -1,0 +1,77 @@
+body {
+    background-color: rgba(47, 118, 29, 0.11);
+    font-family: 'Palatino Linotype', Serif;
+    max-width: 700px;
+    padding: 0px 30px;
+    color: rgb(26, 61, 15);
+}
+
+h2 {
+    margin-bottom: 0px;
+}
+p {
+    margin-top: 0px;
+}
+
+fieldset {
+    border: 2px solid rgb(47, 118, 29);
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+legend {
+    padding: 0px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+label{
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 6px;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+    color: red;
+}
+
+button {
+    background-color: white;
+    color: rgb(26, 61, 15);
+    border: 2px solid rgb(47, 118, 29);
+    height: 50px;
+    width: 350px;
+    float: right;
+}
+button:hover {
+    background-color: rgb(47, 118, 29);
+    color: white;
+    height: 50px;
+    width: 350px;
+}
+input {
+    width: 250px;
+    height: 22px;
+    margin: 1px 2px;
+    border: 1px solid rgb(47, 118, 29);
+}
+
+select {
+    width: 256px;
+    height: 22px;
+    margin: 4px 2px;
+    border: 1px solid rgb(47, 118, 29);
+}
+
+input[type=checkbox]{
+    transform: scale(1.8);
+    width: 10px;
+    margin: 1px 5px;
+}
+
+textarea:required:invalid, input:required:invalid{
+    background-color: bisque;
+}

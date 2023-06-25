@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E9AD0919-3CD4-9967-AF55-D6E286313EF5" containerWithKeyObject="4C53A9E2-99F3-DFD0-A5DC-A45E4F94C53F" localFKIndex="037A15DC-99BF-5718-817E-E9FF8D9D7B82" name="Groups_with_professors_Groups_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>A889A5AD-7B1D-CB12-B809-F3B151F2EFF6</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<referredTableLongName>Groups</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>03F87630-8346-3725-AF6B-B323E3C58C44</referredTableID>
+<keyObject>292AB510-A2AF-531D-D63B-5D39097757B7</keyObject>
+<referredKeyID>292AB510-A2AF-531D-D63B-5D39097757B7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>Group_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #421061;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+   <children>
+      <AnchorPane layoutY="81.0" prefHeight="319.0" prefWidth="700.0" style="-fx-background-color: #E6E6FA;">
+         <children>
+            <Label layoutX="268.0" layoutY="14.0" prefHeight="33.0" prefWidth="163.0" text="Контрольная работа" textFill="#565454">
+               <font>
+                  <Font name="Kristen ITC" size="16.0" />
+               </font>
+            </Label>
+            <Button fx:id="generate" layoutX="228.0" layoutY="182.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="243.0" style="-fx-background-color: #421061;" text="Сгенерировать" textFill="#fcf9f9">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Button>
+            <TextField fx:id="start" layoutX="77.0" layoutY="89.0" prefHeight="25.0" prefWidth="228.0" promptText="Начало диапазона" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="305.0" layoutY="38.0" prefHeight="33.0" prefWidth="90.0" text="Вариант 14" textFill="#565454">
+               <font>
+                  <Font name="Kristen ITC" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="end" layoutX="431.0" layoutY="89.0" prefHeight="25.0" prefWidth="228.0" promptText="Конец диапазона" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="arrayNum" alignment="TOP_CENTER" layoutX="243.0" layoutY="32.0" prefHeight="25.0" prefWidth="228.0" promptText="Итог" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

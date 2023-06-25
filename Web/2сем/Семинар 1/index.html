@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Воронина Ксения, ПИ19-1</title>
+    <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=HNRnemfCBYTlkJd_SP-9ME_Q-NL06Vfr09CB6JJLq9bumJFyZe5a6hvHZsLyT9nj3LYiwFuH_ht10SVZTK3zQITPwNjDEok0CqTvAWKbj5zGJnZhz0VhVUNqIeM-4APyw9GXpcR6PSrmuEPD9BazUA" charset="UTF-8"></script><script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=lyWaU4DM3r1mE_ap6HvaVCFEaXX8o_opZHaRscOD3rRRjKdvp6dCOZXzw-YY7Bat9HMFGxolFgLoSCqyPUYo4ucMEJluDoPE2KrnEw_hc2b4XdEm8t7BMhzoNFBIEup8OK7VRU51SAwS4_-iTFenFQ" charset="UTF-8"></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script><script async src='/cdn-cgi/bm/cv/669835187/api.js'></script></head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .button {
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid #4CAF50;
+        padding: 5px 40px;
+        text-align: center;
+        margin: 4px 2px;
+    }
+
+    .button:hover {
+        background-color: white;
+        color: #2e6a32;
+    }
+
+    input[type=text] {
+        padding: 5px 40px;
+        margin: 4px 2px;
+        border: 2px solid #4CAF50;
+    }
+
+    input[type=text]:focus {
+        border: 2px solid #313131;
+    }
+
+    select {
+        padding: 5px 40px;
+        margin: 4px 2px;
+        border: 2px solid #4CAF50;
+    }
+</style>
+<body>
+    <input type="text" value="Москва, Ленинградский проспект, 49"
+           name="from" id="from" placeholder="Откуда">
+    <input type="text" value="Москва, Рязанский проспект"
+           name="where" id="where" placeholder="Куда">
+
+    <select id="routingMode">
+        <option value="auto">Автомобиль</option>
+        <option value="masstransit">Общественный транспорт</option>
+        <option value="pedestrian">Пешая прогулка</option>
+    </select>
+
+    <input type="button" value="Построить маршрут"
+           class="button"
+           onclick="makeRoute()">
+    <input type="button" value="Очистить карту"
+           class="button"
+           onclick="clearMap()">
+
+</body>
+
+<div id="map" style="width: 100%; height: 100vh"></div>
+
+<script src="https://api-maps.yandex.ru/2.1/?apikey=89b69349-3be4-46c2-be0a-54879badf4c5&lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+    var myMap;
+    var myRoute;
+    ymaps.ready(init);
+    function init(){
+        myMap = new ymaps.Map("map", {
+            // 55.76, 37.64
+            center: [59.9386, 30.3141],
+            zoom: 12,
+            controls: ['zoomControl', 'typeSelector',],
+        });
+
+        var currentLocation = ymaps.geolocation;
+        currentLocation.get({
+            provider: 'yandex',
+            mapStateAutoApply: true,
+        }).then((result) => {
+            myMap.setCenter(result.geoObjects.position, 12);
+        });
+    }
+
+    function  makeRoute(){
+        clearMap();
+        from = document.getElementById('from').value,
+        where = document.getElementById('where').value
+
+        mode = document.getElementById('routingMode').value;
+
+        if (from == '') {
+            alert('Вы забыли указать точку старта!')
+            document.getElementById('from').focus();
+            return;
+        } else if (where == ''){
+            alert('Вы забыли указать конечную точку!')
+            document.getElementById('where').focus();
+            return;
+        }
+
+        myRoute = new ymaps.multiRouter.MultiRoute({
+        referencePoints: [from, where],
+        params: {
+            routingMode: mode,
+            avoidTrafficJams: true
+        }},{
+        routeActiveStrokeWidth: 8,
+        routeActiveStrokeStyle: 'solid',
+        routeActiveStrokeColor: "#0ad404",
+          // Автоматически устанавливать границы карты так,
+          // чтобы маршрут был виден целиком.
+          boundsAutoApply: true
+    });
+
+    // Добавление маршрута на карту.
+    myMap.geoObjects.add(myRoute);
+    myRoute.model.events.add('requestsuccess', function () {
+        var activeRoute = myRoute.getActiveRoute();
+        activeRoute.balloon.open();
+        })
+    }
+
+    function clearMap(){
+        myMap.geoObjects.removeAll()
+    }
+</script>
+</body>
+</html>

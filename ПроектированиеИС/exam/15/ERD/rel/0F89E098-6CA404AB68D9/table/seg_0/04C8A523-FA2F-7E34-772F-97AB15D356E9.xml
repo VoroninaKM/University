@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="04C8A523-FA2F-7E34-772F-97AB15D356E9" name="Requests">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>47793B17-6E6B-4AC5-E35B-94F76009ABD1</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="Request_ID" id="FCD9961C-B14B-F5FB-58AB-264F5133866F">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>60D46DE8-6F25-5D6B-7299-0F063D425571</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Subjects" id="05361473-C7EB-2066-C863-D74BE8CB3883">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>50C983CC-D452-9ABE-1FC7-4D82E5F653C5</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Status" id="A04B003D-4B6C-D37F-F7F3-D1D2DA44FF88">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>22DBCCD0-2771-D2DB-541E-1776FC660AE3</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Groups_Group_ID" id="35F9315D-BA0B-BA87-59F3-608FF2AB69DC">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>C505CC35-DB66-0EC6-3D29-3AC669281EEE</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="59CA4371-721C-7D36-D16C-C1F853AB7253" referredColumn="1D2C52EF-2265-B53B-A726-E7F3B87561FC"/>
+</associations>
+</Column>
+<Column name="Students_Student_ID" id="9670BD44-F04F-4A43-C610-BF84DDA0032F">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>33511309-18E8-D983-5602-AE8DD25E9751</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="562127DC-8CAC-DFC0-359D-56F78FC04199" referredColumn="1CCF62E8-F96E-2B8E-E801-15619B8E6381"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B8D6B398-CEAB-B7B9-1CA1-64B7E099C596" name="Requests_PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>C2794A34-A9CE-8867-093E-FEB9B06A8F8B</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FCD9961C-B14B-F5FB-58AB-264F5133866F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2B0039A2-F426-8FF0-6144-511A0926D250" name="Requests_Groups_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>17077F5D-2697-6C09-AEF7-A0D5605BF6D7</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35F9315D-BA0B-BA87-59F3-608FF2AB69DC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FF85CE9D-DDF1-E0D3-DE1E-5DBB9BBECD19" name="Requests_Students_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>612C1A8E-A683-D76E-19E2-B072281BBF7B</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9670BD44-F04F-4A43-C610-BF84DDA0032F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

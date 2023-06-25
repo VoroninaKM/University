@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+body {
+  text-align: center;
+  background-color: #6ba2ce;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 22px;
+}
+
+.form-rows {
+  position: static;
+  display: block;
+}
+
+.master-div-style {
+  margin: auto;
+  width: 800px;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  padding: 20px 10px 10px 10px;
+}
+
+.fields {
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+.input-fields {
+  height: 20px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.dropdown {
+  height: 35px;
+  width: 140px;
+  padding: 5px;
+  margin: 15px 10px 10px 10px;
+  border: 1px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.radio {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.user-selection {
+  float: left;
+  margin-right: 5px;
+}
+
+.button {
+  font-size: 1em;
+  background-color: #6ba2ce;
+  color: white;
+  border: 0px solid;
+  border-radius: 4px;
+  height: 40px;
+  width: 300px;
+  margin: 10px;
+}
+
+@media (max-width: 833px) {
+  .master-div-style {
+    width: 70%;
+  }
+
+  .fields {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+  }
+
+  .input-fields {
+    width: 80%;
+  }
+
+  .dropdown {
+    width: 90%;
+  }
+}
+
+@media (max-width: 520px) {
+  .master-div-style {
+    width: 80%;
+  }
+
+  .fields {
+    width: 80%;
+    float: left;
+  }
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+
+  .input-fields {
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+<main>
+    <font color="white"><h2 id="title">Воронина Ксения, ПИ19-1, Задание №4</h2></font>
+  <font color="white"><h3 id="title">Создать HTML-страницу с заданными элементами и выполняющую заданные действия в JavaScript-обработчике. Сформировать текст по шаблону, в который вставлются элементы, требующие проверки: год, дата, время, фамилия, почта, число (в диапазоне). Использовать различные типы ввода, таблицу, радиокнопки и т.п. Добавить в задание возможности проверки правильности ввода и сохранение данных в LocalStorage.</h3></font>
+    <font color="white"><h1 id="title">Анкета для студента</h1></font>
+    <div class="master-div-style">
+        <p id="description">Данная анкета поможет в социальном исследовании. Отвечайте честно!</p>
+        <form id="form">
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="name" id="name-label">Введите название вашего ВУЗа</label>
+                </div>
+                <div class="fields">
+                    <input type="text" name="name" id="name" class="input-fields" placeholder="Введите название ВУЗа" required>
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="email" id="email-label">Email</label>
+                </div>
+                <div class="fields">
+                    <input name='email' type="email" id="email" class="input-fields" placeholder="Введите email, чтобы мы отправили результаты исследования" required>
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="number" id="number-label">Насколько баллов вы оцениваете уровень образования в вашем ВУЗе?</label>
+                </div>
+                <div class="fields">
+                    <input name='number' type="number" id="number" class="input-fields" placeholder="Выберете число от 1 до 10" min="1" max="10">
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="dropdown" id="dropdown-label">Выберите направление вашего обучение</label>
+                </div>
+                <div class="fields">
+                    <select name="dropdown" id="dropdown" class="dropdown">
+                        <option value="экономическое">Экономическое</option>
+                        <option value="физико-математическое">Физико-математическое</option>
+                        <option value="техническое">Техническое</option>
+                        <option value="творческое">Творческое</option>
+                        <option value="социальное">Социальное</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="day">Выберите форму обучения</label>
+                </div>
+                <div class="fields">
+                    <ul id="day" name='day' style="list-style: none;">
+                        <li class="radio">
+                            <label>
+                                Очная
+                                <input name="day" type="radio" value="Очная" class="user-selection">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                Очно-заочная
+                                <input name="day" type="radio" value="Очно-заочная" class="user-selection">
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                Заочная
+                                <input name="day" type="radio" value="Заочная" class="user-selection">
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="feelings">
+                        Выберите сферы ваших интересов
+                        <br>
+                        (Выберите все подходящие)
+                    </label>
+                </div>
+                <div class="fields">
+                    <ul id="feelings" name='feelings' style="list-style: none;">
+                        <li class="radio">
+                            <label>
+                                <input name="feelings" value="Наука" type="checkbox" class="user-selection">
+                                Наука
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelings" value="Творчество" type="checkbox" class="user-selection">
+                                Творчество
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelings" value="Спорт" type="checkbox" class="user-selection">
+                                Спорт
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelings" value="Самообразование" type="checkbox" class="user-selection">
+                                Самообразование
+                            </label>
+                        </li>
+                        <li class="radio">
+                            <label>
+                                <input name="feelings" value="Другое" type="checkbox" class="user-selection">
+                                Другое
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="form-rows">
+                <div class="labels">
+                    <label for="details">
+                        Напишите ваши пожелания
+                    </label>
+                </div>
+                <div class="fields">
+                    <textarea id="details" class="input-fields" style="height: 50px;resize:vertical;font-family: Open Sans Condensed;" name="details" cols="1" rows="1" placeholder="Ваши пожелания..."></textarea>
+                </div>
+              
+            </div>
+          
+            <button class="button" id="submit" type="submit">Сохранить в LocalStorage</button><br>
+            <button type="button" class="button" onclick="loadFromLocalStorage()">Загрузить из LocalStorage</button>
+          
+          <div id="card">
+                <div class="card">
+                    <div class="card-body">
+                      
+                    </div>
+                </div>
+         </div>
+        </form>  
+    </div>
+</main>
+<script>
+        const form = document.getElementById('form');
+        const renderElement = (data) => {
+            const card = document.getElementById('card');
+            const content = `<div class="row"><div class="card"> \
+            <div class="card-body">
+                             <p>ВУЗ: ${data.name} </p><br>
+                             <p>Email: ${data.email}</p> <br>
+                             <p>Оценка образования: ${data.number}</p> <br>
+                             <p>Направление обучения: ${data.dropdown}</p> <br>
+                             <p>Форма обчения: ${data.day}</p> <br>
+                             <p>Сфера интересов: ${data.feelings}</p> <br>
+                             <p>Пожелания: ${data.details}</p>
+                            </div>
+        </div></div>`;
+            card.innerHTML = content;
+        }
+
+        document.onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            saveToLocalStorage(JSON.stringify(Object.fromEntries(formData)));
+            renderElement(Object.fromEntries(formData))
+            alert("Форма сохранена");
+        }
+
+        const saveToLocalStorage = (data) => {
+            localStorage.setItem('formData', data);
+        }
+
+        const loadFromLocalStorage = () => {
+            const data = localStorage.getItem('formData');
+            if (data) {
+                renderElement(JSON.parse(data));
+            } else {
+                alert('Нет данных')
+            }
+        }  
+</script>
+</body>
+</html>

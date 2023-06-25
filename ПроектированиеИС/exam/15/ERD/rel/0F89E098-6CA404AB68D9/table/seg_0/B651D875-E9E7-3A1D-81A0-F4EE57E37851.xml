@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B651D875-E9E7-3A1D-81A0-F4EE57E37851" name="Subjects_and_Professors">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>37455775-4165-DCDB-5DE7-C5DE0F7DAD5A</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="8B86A9C7-38D1-748D-5C84-DCED22DC6846">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>7696E168-3444-0F17-CB88-664BAE5BBC94</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Type" id="A29243C2-0225-B7F6-6AF2-CF9700149E3B">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>E6616CD9-169F-7E3E-82AE-F432850C6D70</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Subjects_Subject_ID" id="D44EFB01-EC25-375E-11FD-E8CB57D92FAE">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>57E91364-95B4-F306-9FCA-EACB9FAA2B71</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="7253AB34-89EB-BD63-3968-6971D4A8EBC3" referredColumn="7A8696DE-85D5-3F6A-B2FA-6F92730F012B"/>
+</associations>
+</Column>
+<Column name="Professors_Professor_ID" id="3C938C1E-81BB-39F8-B255-D9A2BF1CFCDB">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>ADDDB9C5-C0AD-9827-D5D4-2953E7C16156</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="F7BED543-983B-A7EA-EC94-E84269C027D6" referredColumn="8F3D2619-C6D1-D4CB-8042-6B80D47041C8"/>
+</associations>
+</Column>
+<Column name="Salary_for_1_hour" id="01EE2C61-68EB-5874-5840-BF22FFE537CD">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 14:23:23 UTC</createdTime>
+<generatorID>CA4DF22F-CCAB-6D45-2185-29E4E9D4669F</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5C2B5444-6677-E37B-85CE-D2BEA256BD39" name="Subjects_and_Professors_PK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>1EF2B7CF-8EC2-DC55-1378-9B65CB6F1A02</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8B86A9C7-38D1-748D-5C84-DCED22DC6846"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6486AF09-90CE-45B5-AFF0-778838A47DA7" name="Subjects_and_Professors_Subjects_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>76EC06B2-EF0F-C78F-AB5E-2072EECF24E7</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D44EFB01-EC25-375E-11FD-E8CB57D92FAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D6CDA80E-D60B-307B-E4A4-65939B17FDB3" name="Subjects_and_Professors_Professors_FK">
+<createdBy>mpapa</createdBy>
+<createdTime>2022-06-13 13:54:36 UTC</createdTime>
+<generatorID>CFE00D8E-347E-B239-D4B6-ECA64E299297</generatorID>
+<ownerDesignName>ERD</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C938C1E-81BB-39F8-B255-D9A2BF1CFCDB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
